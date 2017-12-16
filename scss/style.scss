@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+/*Used colors: dark-brown: #232726 gold: #e8c15f*/
+
+$gold: #e8c15f;
+$brown: #232726;
+$bg: #fff;
+
+
+/*======== Global ========*/
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0px;
+}
+
+.row {
+    padding: 15px;
+    margin: 0;
+}
+
+
+/*======== Header ========*/
+
+.socialbar {
+    position: fixed;
+    top: 0;
+    color: $bg;
+    font-weight: 700;
+    text-align: center;
+    background-color: $brown;
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    z-index: 100000000;
+    a {
+        color: $bg;
+    }
+    span {
+        margin: 0 10px;
+        i {
+            margin: 0 5px;
+        }
+    }
+}
+
+header {
+    position: absolute;
+    top: 26px;
+    width: 100%;
+    background-color: $brown;
+    border-top: 1px groove #aaa;
+    border-bottom: 1px groove #aaa;
+    position: fixed;
+    z-index: 10000;
+    .header {
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        img {
+            max-width: 300px;
+        }
+    }
+}
+
+/* header: DesktopNav */
+
+.nav {
+    float: right;
+    ul {
+        list-style-type: none;
+        li {
+            display: inline-block;
+            padding: 0 20px;
+            color: $bg;
+            cursor: pointer;
+        }
+        a:hover li {
+            background-color: $brown;
+        }
+    }
+    .active {
+        color: $gold;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav {
+        display: none;
+    }
+}
+
+/* header: HabmurgerNav */
+
+.hamburger {
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    line-height: 60px;
+    padding: 0 15px;
+    color: $gold;
+    border: 0;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    z-index: 10000000000000;
+}
+
+.cross {
+    background: none;
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    padding: 5px 15px 0px 15px;
+    color: $gold;
+    border: 0;
+    font-size: 3em;
+    line-height: 65px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    z-index: 10000000000000;
+}
+
+.menu {
+    z-index: 1000000;
+    font-weight: bold;
+    font-size: 0.8em;
+    width: 100%;
+    background: #f1f1f1;
+    position: fixed;
+    top: 88px;
+    text-align: center;
+    font-size: 12px;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        list-style-image: none;
+        li {
+            padding: 15px 0 15px 0;
+            border-bottom: #dddddd 1px solid;
+            :hover {
+                display: block;
+                background: #ffffff;
+                padding: 15px 0 15px 0;
+                border-bottom: #dddddd 1px solid;
+            }
+            a {
+                text-decoration: none;
+                margin: 0px;
+                color: #666;
+                :hover {
+                    color: #666;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.glyphicon-home {
+    color: $bg;
+    font-size: 1.5em;
+    margin-top: 5px;
+    margin: 0 auto;
+}
+
+.header {
+    display: inline-block;
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+
+/*======== Carousel ========*/
+
+.full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(232, 193, 95, 0.6);
+    width: 100%;
+    text-align: left;
+    h3 {
+        position: relative;
+        bottom: 20px;
+        color: $brown;
+        font-size: 30px;
+        font-weight: bold;
+        font-style: italic;
+        text-shadow: none;
+        padding: 0 20px;
+    }
+}
+
+#mycarousel {
+    li {
+        border: 1px solid $brown;
+    }
+    .active {
+        background-color: $brown;
+    }
+}
+
+
+/*======== Main ========*/
+
+main .container {
+    min-height: 300px;
+}
+
+.content {
+    margin-top: 100px;
+    padding: 10px;
+}
+
+.flex {
+    border-top: 1px groove $brown;
+    border-bottom: 1px groove $brown;
+    margin-bottom: 50px;
+    .stamp {
+        text-align: center;
+    }
+    img {
+        max-width: 250px;
+        float: left;
+    }
+    h2 {
+        padding: 30px auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .flex img {
+        float: none;
+        text-align: center;
+    }
+}
+
+.welcome {
+    border-bottom: 1px groove $brown;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    text-align: justify;
+    img {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        margin: 30px auto;
+    }
+}
+
+.picbuttons {
+    margin-bottom: 30px;
+}
+
+.picbutton {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-image: url("../images/marble1.jpg");
+    color: $brown;
+    text-align: center;
+    z-index: 0;
+    h1 {
+        line-height: 150px;
+        margin: 0;
+    }
+    :before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $gold;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform .3s ease-out;
+    }
+
+    :hover:before {
+        transform: scaleX(1);
+    }
+}
+
+
+/*======== Footer ========*/
+
+footer {
+    min-height: 200px;
+    background-color: $brown;
+    color: $bg;
+    h3 {
+        color: $gold;
+        margin-bottom: 20px;
+    }
+
+    .box-1 h3::after {
+        display: inline-block;
+        content: '';
+        float: right;
+        position: relative;
+        top: 9px;
+        width: calc(100% - 130px);
+        height: 2px;
+        background-color: $gold;
+
+    }
+
+    .box-2 h3::after {
+        display: inline-block;
+        content: '';
+        float: right;
+        ion: relative;
+        top: 9px;
+        width: calc(100% - 130px);
+        height: 2px;
+        background-color: $gold;
+
+    }
+
+    .box-3 h3::after {
+        display: inline-block;
+        content: '';
+        float: right;
+        position: relative;
+        top: 9px;
+        width: calc(100% - 60px);
+        height: 2px;
+        background-color: $gold;
+
+    }
+
+    .box {
+        margin-bottom: 60px;
+        padding: 0 30px;
+    }
+}
+
+
+.copy {
+    color: #777;
+    padding: 10px 15px;
+}
