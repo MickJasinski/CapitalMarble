@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -131,54 +129,12 @@
                 <div class="col-sm-4 picbuttons">
                     <div id="myBtn1" class="picbutton">
                         <h1>Kitchen</h1>
-                        <!-- The Modal -->
-                        <div id="myModal1" class="modal">
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <span class="close">&times;</span>
-                                    <h2>Modal Header</h2>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Some text in the Modal Body</p>
-                                    <p>Some other text...</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div id="myBtn2" class="picbutton">
                         <h1>Bathroom</h1>
-                        <!-- The Modal -->
-                        <div id="myModal2" class="modal">
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <span class="close">&times;</span>
-                                    <h2>Modal Header</h2>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Some text in the Modal Body</p>
-                                    <p>Some other text...</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div id="myBtn3" class="picbutton">
                         <h1>Living</h1>
-                        <!-- The Modal -->
-                        <div id="myModal3" class="modal">
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <span class="close">&times;</span>
-                                    <h2>Modal Header</h2>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Some text in the Modal Body</p>
-                                    <p>Some other text...</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -206,140 +162,10 @@
 
 
     <!-- ======================= JavaScript ======================= -->
-    <script>
-        // Hamburger
-        $(document).ready(function() {
 
-            $(".cross").hide();
-            $(".menu").hide();
-            $(".hamburger").click(function() {
-                $(".menu").slideToggle("slow", function() {
-                    $(".hamburger").hide();
-                    $(".cross").show();
-                });
-            });
-
-            $(".cross").click(function() {
-                $(".menu").slideToggle("slow", function() {
-                    $(".cross").hide();
-                    $(".hamburger").show();
-                });
-            });
-
-        });
-
-        //==== Carousel ====
-
-        var $item = $('.carousel .item');
-        var $wHeight = $(window).height();
-        $item.eq(0).addClass('active');
-        $item.height($wHeight);
-        $item.addClass('full-screen');
-
-        $('.carousel img').each(function() {
-            var $src = $(this).attr('src');
-            var $color = $(this).attr('data-color');
-            $(this).parent().css({
-                'background-image': 'url(' + $src + ')',
-                'background-color': $color
-            });
-            $(this).remove();
-        });
-
-        $(window).on('resize', function() {
-            $wHeight = $(window).height();
-            $item.height($wHeight);
-        });
-
-        $('.carousel').carousel({
-            interval: 6000,
-            pause: "false"
-        });
-
-    </script>
-
-    <!--    // ==== Modal====-->
-
-    <!--// Get the modal-->
-    <!--var modal1 = document.getElementById('myModal1');-->
-
-    <!--// Get the button that opens the modal-->
-    <!--var btn = document.getElementById("myBtn1");-->
-
-    <!--// Get the <span> element that closes the modal-->
-    <!--var span = document.getElementsByClassName("close")[0];-->
-
-    <!--// When the user clicks the button, open the modal -->
-    <!--btn.onclick = function() {-->
-    <!--    modal1.style.display = "block";-->
-    <!--}-->
-
-    <!--// When the user clicks on <span> (x), close the modal-->
-    <!--span.onclick = function() {-->
-    <!--    modal1.style.display = "none";-->
-    <!--}-->
-
-    <!--// When the user clicks anywhere outside of the modal, close it-->
-    <!--window.onclick = function(event) {-->
-    <!--    if (event.target == modal1) {-->
-    <!--        modal1.style.display = "none";-->
-    <!--    }-->
-    <!--}-->
-
-
-    <!--// Get the modal-->
-    <!--var modal2 = document.getElementById('myModal2');-->
-
-    <!--// Get the button that opens the modal-->
-    <!--var btn = document.getElementById("myBtn2");-->
-
-    <!--// Get the <span> element that closes the modal-->
-    <!--var span = document.getElementsByClassName("close")[0];-->
-
-    <!--// When the user clicks the button, open the modal -->
-    <!--btn.onclick = function() {-->
-    <!--    modal2.style.display = "block";-->
-    <!--}-->
-
-    <!--// When the user clicks on <span> (x), close the modal-->
-    <!--span.onclick = function() {-->
-    <!--    modal2.style.display = "none";-->
-    <!--}-->
-
-    <!--// When the user clicks anywhere outside of the modal, close it-->
-    <!--window.onclick = function(event) {-->
-    <!--    if (event.target == modal2) {-->
-    <!--        modal2.style.display = "none";-->
-    <!--    }-->
-    <!--}-->
-
-
-    <!--// Get the modal-->
-    <!--var modal3 = document.getElementById('myModal3');-->
-
-    <!--// Get the button that opens the modal-->
-    <!--var btn = document.getElementById("myBtn3");-->
-
-    <!--// Get the <span> element that closes the modal-->
-    <!--var span = document.getElementsByClassName("close")[0];-->
-
-    <!--// When the user clicks the button, open the modal -->
-    <!--btn.onclick = function() {-->
-    <!--    modal3.style.display = "block";-->
-    <!--}-->
-
-    <!--// When the user clicks on <span> (x), close the modal-->
-    <!--span.onclick = function() {-->
-    <!--    modal3.style.display = "none";-->
-    <!--}-->
-
-    <!--// When the user clicks anywhere outside of the modal, close it-->
-    <!--window.onclick = function(event) {-->
-    <!--    if (event.target == modal3) {-->
-    <!--        modal3.style.display = "none";-->
-    <!--    }-->
-    <!--}-->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
 </body>
 
 </html>
