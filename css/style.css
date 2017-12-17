@@ -104,26 +104,30 @@ header {
   top: 88px;
   text-align: center;
   font-size: 12px; }
-  .menu ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    list-style-image: none; }
-    .menu ul li {
-      padding: 15px 0 15px 0;
-      border-bottom: #dddddd 1px solid; }
-      .menu ul li :hover {
-        display: block;
-        background: #ffffff;
-        padding: 15px 0 15px 0;
-        border-bottom: #dddddd 1px solid; }
-      .menu ul li a {
-        text-decoration: none;
-        margin: 0px;
-        color: #666; }
-        .menu ul li a :hover {
-          color: #666;
-          text-decoration: none; }
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none; }
+
+.menu li {
+  padding: 15px 0 15px 0;
+  border-bottom: #dddddd 1px solid; }
+
+.menu li:hover {
+  display: block;
+  background: #f7f7f7;
+  padding: 15px 0 15px 0;
+  border-bottom: #dddddd 1px solid; }
+
+.menu a {
+  text-decoration: none;
+  color: #666; }
+
+.menu a :hover {
+  text-decoration: none;
+  color: #666; }
 
 .glyphicon-home {
   color: #fff;
@@ -190,7 +194,15 @@ main .container {
   .flex img {
     float: none;
     text-align: center; } }
+.contentbox {
+  display: flex;
+  align-items: stretch; }
+
+@media (max-width: 767px) {
+  .contentbox {
+    display: block; } }
 .welcome {
+  max-width: 600px;
   border-bottom: 1px groove #232726;
   padding-bottom: 10px;
   margin-bottom: 50px;
@@ -202,7 +214,10 @@ main .container {
     margin: 30px auto; }
 
 .picbuttons {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center; }
 
 .picbutton {
   display: inline-block;
