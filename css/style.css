@@ -188,6 +188,7 @@ main .container {
     max-width: 250px;
     float: left; }
   .flex h2 {
+    margin-top: 70px;
     padding: 30px auto; }
 
 @media (max-width: 767px) {
@@ -205,7 +206,7 @@ main .container {
   max-width: 600px;
   border-bottom: 1px groove #232726;
   padding-bottom: 10px;
-  margin-bottom: 50px;
+  margin: 0 auto 50px auto;
   text-align: justify; }
   .welcome img {
     display: block;
@@ -214,10 +215,9 @@ main .container {
     margin: 30px auto; }
 
 .picbuttons {
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
   width: 100%;
-  max-width: 400px;
-  text-align: center; }
+  max-width: 400px; }
 
 .picbutton {
   display: inline-block;
@@ -248,6 +248,36 @@ main .container {
   .picbutton :hover:before {
     transform: scaleX(1); }
 
+/*======== Brands ========*/
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  background-color: #eee;
+  margin-bottom: 80px; }
+
+#brands-carousel-left,
+#brands-carousel-center,
+#brands-carousel-right {
+  margin: 50px auto 0 auto;
+  width: 300px;
+  height: 200px;
+  overflow: hidden; }
+  #brands-carousel-left ul,
+  #brands-carousel-center ul,
+  #brands-carousel-right ul {
+    list-style-type: none;
+    padding: 0;
+    width: 900px; }
+  #brands-carousel-left li,
+  #brands-carousel-center li,
+  #brands-carousel-right li {
+    float: left; }
+
+@media (max-width: 888px) {
+  #brands-carousel-left,
+  #brands-carousel-right {
+    display: none; } }
 /*======== Footer ========*/
 footer {
   min-height: 200px;
@@ -269,7 +299,7 @@ footer {
     display: inline-block;
     content: '';
     float: right;
-    ion: relative;
+    position: relative;
     top: 9px;
     width: calc(100% - 130px);
     height: 2px;

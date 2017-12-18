@@ -244,6 +244,7 @@ main .container {
         float: left;
     }
     h2 {
+        margin-top: 70px;
         padding: 30px auto;
     }
 }
@@ -270,7 +271,7 @@ main .container {
     max-width: 600px;
     border-bottom: 1px groove $brown;
     padding-bottom: 10px;
-    margin-bottom: 50px;
+    margin: 0 auto 50px auto;
     text-align: justify;
     img {
         display: block;
@@ -281,10 +282,9 @@ main .container {
 }
 
 .picbuttons {
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
     width: 100%;
     max-width: 400px;
-    text-align: center;
 }
 
 .picbutton {
@@ -302,7 +302,7 @@ main .container {
         line-height: 150px;
         margin: 0;
     }
-    :before {
+     :before {
         content: "";
         position: absolute;
         z-index: -1;
@@ -316,8 +316,43 @@ main .container {
         transition: transform .3s ease-out;
     }
 
-    :hover:before {
+     :hover:before {
         transform: scaleX(1);
+    }
+}
+
+
+/*======== Brands ========*/
+
+.brands {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    background-color: #eee;
+    margin-bottom: 80px;
+}
+
+#brands-carousel-left,
+#brands-carousel-center,
+#brands-carousel-right {
+    margin: 50px auto 0 auto;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        width: 900px;
+    }
+    li {
+        float: left;
+    }
+}
+
+@media (max-width: 888px) {
+    #brands-carousel-left,
+    #brands-carousel-right {
+        display: none;
     }
 }
 
@@ -342,19 +377,17 @@ footer {
         width: calc(100% - 130px);
         height: 2px;
         background-color: $gold;
-
     }
 
     .box-2 h3::after {
         display: inline-block;
         content: '';
         float: right;
-        ion: relative;
+        position: relative;
         top: 9px;
         width: calc(100% - 130px);
         height: 2px;
         background-color: $gold;
-
     }
 
     .box-3 h3::after {
@@ -366,7 +399,6 @@ footer {
         width: calc(100% - 60px);
         height: 2px;
         background-color: $gold;
-
     }
 
     .box {
@@ -374,7 +406,6 @@ footer {
         padding: 0 30px;
     }
 }
-
 
 .copy {
     color: #777;
