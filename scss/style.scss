@@ -69,18 +69,27 @@ header {
     float: right;
     ul {
         list-style-type: none;
+    }
+
         li {
             display: inline-block;
             padding: 0 20px;
-            color: $bg;
+            color: #fff;
             cursor: pointer;
         }
         a:hover li {
-            background-color: $brown;
+            background-color: #2e3331;
         }
-    }
+
     .active {
-        color: $gold;
+        color: #e8c15f;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .nav {
+        display: none;
     }
 }
 
