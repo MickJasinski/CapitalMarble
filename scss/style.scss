@@ -96,13 +96,6 @@ header {
     }
 }
 
-
-@media (max-width: 767px) {
-    .nav {
-        display: none;
-    }
-}
-
 @media (max-width: 767px) {
     .nav {
         display: none;
@@ -244,7 +237,7 @@ header {
 }
 
 
-/*======== Main ========*/
+/*======== Home ========*/
 
 main .container {
     min-height: 300px;
@@ -419,6 +412,34 @@ main .container {
     #brands-carousel-left,
     #brands-carousel-right {
         display: none;
+    }
+}
+
+
+/*======== Pages ========*/
+
+.page {
+    margin-top: 88px;
+    min-height: calc(100vh - 88px);
+    text-align: center;
+    .half {
+        margin: 0;
+        width: 50vw;
+        float: left;
+    }
+    .image {
+        height: calc(100vh - 88px);
+        overflow: hidden;
+        background-image: url('../images/slider/slide01.jpg');
+        background-size: cover;
+        background-position: center;
+        h1 {
+            color: $gold;
+        }
+    }
+    .text {
+        text-align: justify;
+        padding: 20px;
     }
 }
 

@@ -63,9 +63,6 @@ header {
 @media (max-width: 767px) {
   .nav {
     display: none; } }
-@media (max-width: 767px) {
-  .nav {
-    display: none; } }
 /* header: HabmurgerNav */
 .hamburger {
   background: none;
@@ -173,7 +170,7 @@ header {
 #mycarousel .active {
   background-color: #232726; }
 
-/*======== Main ========*/
+/*======== Home ========*/
 main .container {
   min-height: 300px; }
 
@@ -315,6 +312,27 @@ main .container {
   #brands-carousel-left,
   #brands-carousel-right {
     display: none; } }
+/*======== Pages ========*/
+.page {
+  margin-top: 88px;
+  min-height: calc(100vh - 88px);
+  text-align: center; }
+  .page .half {
+    margin: 0;
+    width: 50vw;
+    float: left; }
+  .page .image {
+    height: calc(100vh - 88px);
+    overflow: hidden;
+    background-image: url("../images/slider/slide01.jpg");
+    background-size: cover;
+    background-position: center; }
+    .page .image h1 {
+      color: #e8c15f; }
+  .page .text {
+    text-align: justify;
+    padding: 20px; }
+
 /*======== Footer ========*/
 footer {
   min-height: 200px;
