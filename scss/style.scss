@@ -10,8 +10,6 @@ $gray: #888;
 $dark: #222;
 
 
-
-
 /*======== Global ========*/
 
 .container {
@@ -24,8 +22,6 @@ $dark: #222;
     padding: 15px;
     margin: 0;
 }
-
-
 
 
 /*======== Header ========*/
@@ -71,8 +67,6 @@ header {
     }
 }
 
-
-
 /* header: DesktopNav */
 
 .nav {
@@ -96,13 +90,17 @@ header {
     }
 }
 
+@media (max-width: 1056px) {
+    .nav li {
+        padding: 0 10px;
+    }
+}
+
 @media (max-width: 767px) {
     .nav {
         display: none;
     }
 }
-
-
 
 /* header: HabmurgerNav */
 
@@ -196,8 +194,6 @@ header {
         display: none;
     }
 }
-
-
 
 
 /*======== Carousel ========*/
@@ -419,30 +415,50 @@ main .container {
 /*======== Pages ========*/
 
 .page {
+    max-width: 100%;
     margin-top: 88px;
     min-height: calc(100vh - 88px);
     text-align: center;
-    .half {
-        margin: 0;
-        width: 50vw;
-        float: left;
-    }
     .image {
         height: calc(100vh - 88px);
+        padding: 0;
         overflow: hidden;
-        background-image: url('../images/slider/slide01.jpg');
         background-size: cover;
         background-position: center;
         h1 {
             color: $gold;
+            background-color: rgba(35,39,38,.6);
+            padding: 30px;
+            margin-top: 40vh;
         }
     }
+    .kitchen {
+        background-image: url('../images/slider/slide01.jpg');
+
+    }
+    .living {
+        background-image: url('../images/slider/slide03.jpg');
+    }
+    .bathroom {
+        background-image: url('../images/slider/slide02.jpg');
+    }
     .text {
-        text-align: justify;
-        padding: 20px;
+        max-height: calc(100vh - 88px); 
+        text-align: center;
+        padding: 120px 60px 60px 60px;
+        overflow: scroll;
+        p {
+            padding: 20px;
+            font-size: 20px;
+        }
     }
 }
 
+@media (max-width: 1056px) {
+    .page .text {
+        padding: 80px 30px 30px 30px;
+    }
+}
 
 /*======== Footer ========*/
 

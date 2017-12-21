@@ -60,6 +60,9 @@ header {
   .nav .active {
     color: #e8c15f; }
 
+@media (max-width: 1056px) {
+  .nav li {
+    padding: 0 10px; } }
 @media (max-width: 767px) {
   .nav {
     display: none; } }
@@ -314,25 +317,39 @@ main .container {
     display: none; } }
 /*======== Pages ========*/
 .page {
+  max-width: 100%;
   margin-top: 88px;
   min-height: calc(100vh - 88px);
   text-align: center; }
-  .page .half {
-    margin: 0;
-    width: 50vw;
-    float: left; }
   .page .image {
     height: calc(100vh - 88px);
+    padding: 0;
     overflow: hidden;
-    background-image: url("../images/slider/slide01.jpg");
     background-size: cover;
     background-position: center; }
     .page .image h1 {
-      color: #e8c15f; }
+      color: #e8c15f;
+      background-color: rgba(35, 39, 38, 0.6);
+      padding: 30px;
+      margin-top: 40vh; }
+  .page .kitchen {
+    background-image: url("../images/slider/slide01.jpg"); }
+  .page .living {
+    background-image: url("../images/slider/slide03.jpg"); }
+  .page .bathroom {
+    background-image: url("../images/slider/slide02.jpg"); }
   .page .text {
-    text-align: justify;
-    padding: 20px; }
+    max-height: calc(100vh - 88px);
+    text-align: center;
+    padding: 120px 60px 60px 60px;
+    overflow: scroll; }
+    .page .text p {
+      padding: 20px;
+      font-size: 20px; }
 
+@media (max-width: 1056px) {
+  .page .text {
+    padding: 80px 30px 30px 30px; } }
 /*======== Footer ========*/
 footer {
   min-height: 200px;
