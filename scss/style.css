@@ -153,8 +153,7 @@ header {
   font-size: 80px;
   color: #232726;
   z-index: 1000;
-  animation: blinker .9s ease infinite;
-  cursor: pointer; }
+  animation: blinker .9s ease infinite; }
 
 @keyframes blinker {
   50% {

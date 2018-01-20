@@ -209,6 +209,7 @@ header {
     color: $brown;
     z-index: 1000;
     animation: blinker .9s ease infinite;
+    cursor: pointer;
 }
 
 @keyframes blinker {
