@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Alfa+Slab+One");
 
-
 /*Used colors: dark-brown: #232726 gold: #e8c15f*/
 
 $gold: #e8c15f;
@@ -67,6 +66,7 @@ header {
     }
 }
 
+
 /* header: DesktopNav */
 
 .nav {
@@ -101,6 +101,9 @@ header {
         display: none;
     }
 }
+
+
+
 
 /* header: HabmurgerNav */
 
@@ -198,6 +201,28 @@ header {
 
 /*======== Carousel ========*/
 
+.fa-arrow-circle-o-down {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 80px;
+    color: $brown;
+    z-index: 1000;
+    animation: blinker .9s ease infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: .7;
+    }
+}
+
+@media (max-width: 767px) {
+    .fa-arrow-circle-o-down {
+        font-size: 60px;
+    }
+}
+
 .full-screen {
     background-size: cover;
     background-position: center;
@@ -211,15 +236,16 @@ header {
     background-color: rgba(232, 193, 95, 0.6);
     width: 100%;
     text-align: left;
+    margin: 0;
     h3 {
         position: relative;
         bottom: 20px;
         color: $brown;
-        font-size: 30px;
+        font-size: 50px;
         font-weight: bold;
         font-style: italic;
         text-shadow: none;
-        padding: 0 20px;
+        padding: 20px 20px 20px 40px;
     }
 }
 
@@ -252,7 +278,7 @@ main .container {
     letter-spacing: 3px;
     font-family: 'Alfa Slab One', cursive;
     color: $brown;
-    padding: 30px;
+    padding: 120px 30px 30px 30px;
     h1 {
         font-size: 40px;
         float: left;
@@ -296,8 +322,7 @@ main .container {
 }
 
 .welcome {
-    max-width: 600px;
-    // border-bottom: 1px groove $brown;
+    max-width: 600px; // border-bottom: 1px groove $brown;
     padding-bottom: 10px;
     margin: 0 auto 50px auto;
     text-align: justify;
@@ -327,7 +352,7 @@ main .container {
     a {
         color: $brown;
     }
-    :hover {
+     :hover {
         text-decoration: none;
     }
     h1 {
@@ -364,7 +389,7 @@ main .container {
         padding-bottom: 30px;
         letter-spacing: 2px;
     }
-        img {
+    img {
         display: block;
         width: 100%;
         max-width: 300px;
@@ -394,6 +419,7 @@ main .container {
     width: 300px;
     height: 200px;
     overflow: hidden;
+    box-shadow: 3px 4px 25px #bbb;
     ul {
         list-style-type: none;
         padding: 0;
@@ -427,14 +453,13 @@ main .container {
         background-position: center;
         h1 {
             color: $gold;
-            background-color: rgba(35,39,38,.6);
+            background-color: rgba(35, 39, 38, .6);
             padding: 30px;
             margin-top: 40vh;
         }
     }
     .kitchen {
         background-image: url('../images/slider/slide01.jpg');
-
     }
     .living {
         background-image: url('../images/slider/slide03.jpg');
@@ -443,7 +468,7 @@ main .container {
         background-image: url('../images/slider/slide02.jpg');
     }
     .text {
-        max-height: calc(100vh - 88px); 
+        max-height: calc(100vh - 88px);
         text-align: center;
         padding: 120px 60px 60px 60px;
         overflow: scroll;
@@ -459,6 +484,13 @@ main .container {
         padding: 80px 30px 30px 30px;
     }
 }
+
+@media (max-width: 767px) {
+    .page .text {
+        max-height: none;
+    }
+}
+
 
 /*======== Footer ========*/
 

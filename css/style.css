@@ -146,6 +146,21 @@ header {
   .hamburger {
     display: none; } }
 /*======== Carousel ========*/
+.fa-arrow-circle-o-down {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 80px;
+  color: #232726;
+  z-index: 1000;
+  animation: blinker .9s ease infinite; }
+
+@keyframes blinker {
+  50% {
+    opacity: .7; } }
+@media (max-width: 767px) {
+  .fa-arrow-circle-o-down {
+    font-size: 60px; } }
 .full-screen {
   background-size: cover;
   background-position: center;
@@ -157,16 +172,17 @@ header {
   bottom: 0;
   background-color: rgba(232, 193, 95, 0.6);
   width: 100%;
-  text-align: left; }
+  text-align: left;
+  margin: 0; }
   .carousel-caption h3 {
     position: relative;
     bottom: 20px;
     color: #232726;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
     font-style: italic;
     text-shadow: none;
-    padding: 0 20px; }
+    padding: 20px 20px 20px 40px; }
 
 #mycarousel li {
   border: 1px solid #232726; }
@@ -189,7 +205,7 @@ main .container {
   letter-spacing: 3px;
   font-family: 'Alfa Slab One', cursive;
   color: #232726;
-  padding: 30px; }
+  padding: 120px 30px 30px 30px; }
   .values h1 {
     font-size: 40px;
     float: left;
@@ -299,7 +315,8 @@ main .container {
   margin: 50px auto 0 auto;
   width: 300px;
   height: 200px;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 3px 4px 25px #bbb; }
   #brands-carousel-left ul,
   #brands-carousel-center ul,
   #brands-carousel-right ul {
@@ -350,6 +367,9 @@ main .container {
 @media (max-width: 1056px) {
   .page .text {
     padding: 80px 30px 30px 30px; } }
+@media (max-width: 767px) {
+  .page .text {
+    max-height: none; } }
 /*======== Footer ========*/
 footer {
   min-height: 200px;
