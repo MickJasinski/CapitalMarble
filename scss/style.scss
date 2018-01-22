@@ -218,6 +218,10 @@ header {
     }
 }
 
+.carousel-control {
+    transition: .5s ease;
+}
+
 @media (max-width: 767px) {
     .fa-arrow-circle-o-down {
         font-size: 60px;
@@ -267,8 +271,9 @@ main .container {
 }
 
 .content {
-    margin-top: 0px;
-    padding: 10px;
+    margin-top: 0px;  
+    border-left: solid 2px $brown;
+    border-right: solid 2px $brown;
 }
 
 .values {
@@ -322,6 +327,12 @@ main .container {
     }
 }
 
+.guarantee {
+    color: $gold;
+    background-color: $brown;
+    padding-right: 30px;
+}
+
 .welcome {
     max-width: 600px; // border-bottom: 1px groove $brown;
     padding-bottom: 10px;
@@ -347,6 +358,7 @@ main .container {
     margin-bottom: 20px;
     cursor: pointer;
     background-image: url("../images/marble1.jpg");
+    background-size: cover;
     color: $brown;
     text-align: center;
     z-index: 0;
@@ -381,8 +393,8 @@ main .container {
 
 .staff {
     text-align: center;
-    color: $gray;
-    border-top: 1px groove $brown;
+    color: $gold;
+    background-color: $brown;
     padding-top: 50px;
     h1 {
         font-family: 'Alfa Slab One', cursive;
@@ -397,12 +409,24 @@ main .container {
         margin: 20px auto 60px auto;
     }
     h4 {
-        padding: 0 20px;
+        padding: 0 20px 50px 20px;
     }
 }
 
 
 /*======== Brands ========*/
+
+.brands-header {
+    text-align: center;
+    margin-top: 100px;
+    background-color: #eee;
+    border-bottom: solid thin #ddd;
+}
+
+.brands-header h1 {
+    margin: 0;
+    padding: 20px;
+}
 
 .brands {
     max-width: 100%;
@@ -410,7 +434,6 @@ main .container {
     flex-wrap: wrap;
     align-content: space-around;
     background-color: #eee;
-    margin-top: 100px;
 }
 
 #brands-carousel-left,
@@ -472,7 +495,6 @@ main .container {
         max-height: calc(100vh - 88px);
         text-align: center;
         padding: 120px 60px 60px 60px;
-        overflow: scroll;
         p {
             padding: 20px;
             font-size: 20px;
