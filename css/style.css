@@ -213,9 +213,14 @@ main .container {
   color: #232726;
   padding: 120px 30px 30px 30px; }
   .values h1 {
-    font-size: 40px;
+    font-size: 30px;
     float: left;
-    padding: 10px 30px; }
+    padding: 10px 30px;
+    display: block;
+    width: 320px; }
+  .values i {
+    font-size: 60px;
+    padding-bottom: 30px; }
 
 .flex {
   border-top: 1px groove #232726;

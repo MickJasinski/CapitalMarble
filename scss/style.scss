@@ -287,9 +287,15 @@ main .container {
     color: $brown;
     padding: 120px 30px 30px 30px;
     h1 {
-        font-size: 40px;
+        font-size: 30px;
         float: left;
         padding: 10px 30px;
+        display: block;
+        width: 320px;
+    }
+    i {
+        font-size: 60px;
+        padding-bottom: 30px;
     }
 }
 
