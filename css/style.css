@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Alfa+Slab+One");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Alfa+Slab+One|Baloo");
 /*Used colors: dark-brown: #232726 gold: #e8c15f*/
 /*======== Global ========*/
 .container {
@@ -209,11 +209,11 @@ main .container {
   flex-wrap: wrap;
   text-align: center;
   letter-spacing: 3px;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Baloo', cursive;
   color: #232726;
   padding: 120px 30px 30px 30px; }
   .values h1 {
-    font-size: 30px;
+    font-size: 36px;
     float: left;
     padding: 10px 30px;
     display: block;
@@ -249,23 +249,33 @@ main .container {
 .guarantee {
   color: #e8c15f;
   background-color: #232726;
-  padding-right: 30px; }
+  padding: 30px; }
 
 .welcome {
   max-width: 600px;
   padding-bottom: 10px;
   margin: 0 auto 50px auto;
   text-align: justify; }
-  .welcome p {
-    padding: 20px 0 80px 40px;
-    color: #888; }
-
-.welcome h4 {
-  font-size: 22px; }
+  .welcome h4 {
+    font-size: 22px;
+    margin-bottom: 60px; }
+  .welcome .icon {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 60px; }
 
 .picbuttons {
   margin: 0 auto;
   width: 100%; }
+
+#myBtn1 {
+  background-image: url("../images/picbuttons/picbtn01.jpg"); }
+
+#myBtn2 {
+  background-image: url("../images/picbuttons/picbtn02.jpg"); }
+
+#myBtn3 {
+  background-image: url("../images/picbuttons/picbtn03.jpg"); }
 
 .picbutton {
   display: inline-block;
@@ -274,19 +284,20 @@ main .container {
   min-height: 400px;
   margin-bottom: 20px;
   cursor: pointer;
-  background-image: url("../images/marble1.jpg");
   background-size: cover;
   color: #232726;
   text-align: center;
   z-index: 0; }
   .picbutton a {
     color: #232726; }
-  .picbutton :hover {
-    text-decoration: none; }
   .picbutton h1 {
+    text-shadow: -2px -2px 0 #e8c15f, 2px -2px 0 #e8c15f, -2px 2px 0 #e8c15f, 2px 2px 0 #e8c15f;
     line-height: 400px;
     margin: 0;
-    font-size: 60px; }
+    font-size: 60px;
+    transition: .3s ease; }
+  .picbutton :hover {
+    text-decoration: none; }
   .picbutton :before {
     content: "";
     position: absolute;
@@ -318,7 +329,8 @@ main .container {
     max-width: 300px;
     margin: 20px auto 60px auto; }
   .staff h4 {
-    padding: 0 20px 50px 20px; }
+    line-height: 25px;
+    padding: 0 40px 50px 40px; }
 
 /*======== Brands ========*/
 .brands-header {
@@ -361,6 +373,118 @@ main .container {
   #brands-carousel-left,
   #brands-carousel-right {
     display: none; } }
+/*======== Footer ========*/
+footer {
+  min-height: 200px;
+  background-color: #232726;
+  color: #fff; }
+  footer h3 {
+    color: #e8c15f;
+    margin-bottom: 20px; }
+  footer .box-1 h3::after {
+    display: inline-block;
+    content: '';
+    float: right;
+    position: relative;
+    top: 9px;
+    width: calc(100% - 160px);
+    height: 2px;
+    background-color: #e8c15f; }
+  footer .box-2 h3::after {
+    display: inline-block;
+    content: '';
+    float: right;
+    position: relative;
+    top: 9px;
+    width: calc(100% - 210px);
+    height: 2px;
+    background-color: #e8c15f; }
+  footer .box-3 h3::after {
+    display: inline-block;
+    content: '';
+    float: right;
+    position: relative;
+    top: 9px;
+    width: calc(100% - 70px);
+    height: 2px;
+    background-color: #e8c15f; }
+  footer .box {
+    margin-bottom: 60px;
+    padding: 0 30px; }
+
+.copy {
+  text-align: right;
+  color: #e8c15f;
+  background-color: #333;
+  padding: 10px 25px; }
+
+/*======== Testimonials ========*/
+/*-------------------------------*/
+/*    Carousel Fade Transition   */
+/*-------------------------------*/
+#fade-quote-carousel.carousel .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -ms-transition-property: opacity;
+  transition-property: opacity; }
+
+#fade-quote-carousel.carousel .carousel-inner .active {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  -ms-transition-property: opacity;
+  transition-property: opacity; }
+
+#fade-quote-carousel.carousel .carousel-indicators {
+  position: static;
+  margin: 0 0 15px 0; }
+
+#fade-quote-carousel.carousel .carousel-indicators > li {
+  background-color: #e8c15f;
+  border: none; }
+
+#fade-quote-carousel blockquote {
+  text-align: left;
+  font-size: 14px;
+  font-style: italic;
+  border: none;
+  padding: 0;
+  margin: 0; }
+
+#fade-quote-carousel {
+  width: calc(100% - 50px);
+  float: right; }
+
+.carousel-box .full-screen {
+  max-height: 200px;
+  overflow: visible; }
+
+section {
+  padding-top: 0px;
+  padding-bottom: 0px; }
+
+.quote {
+  display: inline-block;
+  color: #e8c15f;
+  font-size: 10px;
+  text-align: left;
+  width: 30px;
+  float: left; }
+
+.testi-box {
+  padding: 0;
+  margin: 0; }
+
+.carousel-inner {
+  width: 100%; }
+
+/*======== Find Us & Map ========*/
+.adress {
+  padding-top: 42px;
+  text-align: center; }
+
+.map {
+  margin-top: 30px; }
+
 /*======== Pages ========*/
 .page {
   max-width: 100%;
@@ -381,9 +505,9 @@ main .container {
   .page .kitchen {
     background-image: url("../images/slider/slide01.jpg"); }
   .page .living {
-    background-image: url("../images/slider/slide03.jpg"); }
-  .page .bathroom {
     background-image: url("../images/slider/slide02.jpg"); }
+  .page .bathroom {
+    background-image: url("../images/slider/slide03.jpg"); }
   .page .text {
     max-height: calc(100vh - 88px);
     text-align: center;
@@ -398,47 +522,5 @@ main .container {
 @media (max-width: 767px) {
   .page .text {
     max-height: none; } }
-/*======== Footer ========*/
-footer {
-  min-height: 200px;
-  background-color: #232726;
-  color: #fff; }
-  footer h3 {
-    color: #e8c15f;
-    margin-bottom: 20px; }
-  footer .box-1 h3::after {
-    display: inline-block;
-    content: '';
-    float: right;
-    position: relative;
-    top: 9px;
-    width: calc(100% - 130px);
-    height: 2px;
-    background-color: #e8c15f; }
-  footer .box-2 h3::after {
-    display: inline-block;
-    content: '';
-    float: right;
-    position: relative;
-    top: 9px;
-    width: calc(100% - 130px);
-    height: 2px;
-    background-color: #e8c15f; }
-  footer .box-3 h3::after {
-    display: inline-block;
-    content: '';
-    float: right;
-    position: relative;
-    top: 9px;
-    width: calc(100% - 60px);
-    height: 2px;
-    background-color: #e8c15f; }
-  footer .box {
-    margin-bottom: 60px;
-    padding: 0 30px; }
-
-.copy {
-  color: #777;
-  padding: 10px 15px; }
 
 /*# sourceMappingURL=style.css.map */
