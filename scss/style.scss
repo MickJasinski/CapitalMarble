@@ -207,6 +207,7 @@ header {
     right: 20px;
     font-size: 80px;
     color: $brown;
+    text-shadow: 2px 1px $bg;
     z-index: 1000;
     animation: blinker .9s ease infinite;
     cursor: pointer;
@@ -238,18 +239,18 @@ header {
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: rgba(232, 193, 95, 0.6);
+    background: linear-gradient(to top, rgba(232, 193, 95, 0.6), rgba(0,0,0,0));
     width: 100%;
     text-align: left;
     margin: 0;
     h3 {
         position: relative;
-        bottom: 20px;
+        bottom: 28px;
         color: $brown;
         font-size: 50px;
         font-weight: bold;
         font-style: italic;
-        text-shadow: none;
+        text-shadow: 2px 1px $bg;
         padding: 20px 20px 20px 40px;
     }
 }
