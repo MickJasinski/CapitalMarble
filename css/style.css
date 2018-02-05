@@ -410,8 +410,11 @@ footer {
     background-color: #e8c15f; }
   footer .box {
     margin-bottom: 60px;
-    padding: 0 30px; }
+    padding: 0; }
 
+@media (max-width: 767px) {
+  footer .box {
+    padding-bottom: 10px; } }
 .copy {
   text-align: right;
   color: #e8c15f;

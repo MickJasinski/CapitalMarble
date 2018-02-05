@@ -536,7 +536,13 @@ footer {
 
     .box {
         margin-bottom: 60px;
-        padding: 0 30px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    footer .box {
+        padding-bottom: 10px;
     }
 }
 
